@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Drop = { dx: number; dy: number; size: number; color: string; dur: number };
 type Burst = { id: number; x: number; y: number; drops: Drop[] };
@@ -16,11 +16,9 @@ let counter = 0;
  * Слой не перехватывает клики (pointer-events: none).
  */
 export function SplashLayer() {
-  const reduce = useReducedMotion();
   const [bursts, setBursts] = useState<Burst[]>([]);
 
   useEffect(() => {
-    if (reduce) return;
     const onDown = (e: PointerEvent) => {
       const target = e.target as HTMLElement | null;
       if (!target || !target.closest("[data-splash]")) return;
@@ -48,7 +46,7 @@ export function SplashLayer() {
 
     window.addEventListener("pointerdown", onDown);
     return () => window.removeEventListener("pointerdown", onDown);
-  }, [reduce]);
+  }, []);
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[9999]" aria-hidden>
