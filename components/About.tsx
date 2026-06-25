@@ -7,7 +7,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-sand-fade py-24 sm:py-32"
+      className="relative overflow-hidden bg-sand-fade py-24 sm:py-32 dark:bg-none dark:bg-night"
     >
       {/* warm sun glow blobs */}
       <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-gold/30 blur-3xl" />
@@ -21,14 +21,14 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h2 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-black leading-tight text-ink sm:text-6xl">
+          <h2 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-black leading-tight text-ink dark:text-cloud sm:text-6xl">
             Город плавится от жары?{" "}
             <span className="text-sunset">Мы зовём к воде.</span>
           </h2>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-ink/75 sm:text-2xl">
+          <p className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-ink/75 dark:text-cloud/70 sm:text-2xl">
             «Прищепка» — просторная зелёная территория для отдыха с четырьмя
             открытыми тёплыми бассейнами. Купайся под солнцем, отдыхай в тени
             деревьев и проводи здесь целый летний день — от утреннего заплыва
@@ -45,7 +45,7 @@ export function About() {
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl bg-white/70 px-2 py-4 shadow-[0_20px_50px_-20px_rgba(11,37,69,0.25)] backdrop-blur-sm sm:rounded-3xl sm:p-7"
+                className="rounded-2xl bg-white/70 px-2 py-4 shadow-[0_20px_50px_-20px_rgba(11,37,69,0.25)] backdrop-blur-sm dark:bg-white/[0.06] dark:shadow-none sm:rounded-3xl sm:p-7"
               >
                 {s.prefix && (
                   <div className="text-[11px] font-bold uppercase tracking-wider text-sun-deep sm:text-sm">
@@ -55,7 +55,7 @@ export function About() {
                 <div className="whitespace-nowrap text-base font-black tracking-tight text-sunset sm:font-display sm:text-3xl lg:text-4xl">
                   {s.value}
                 </div>
-                <div className="mt-1 text-[11px] font-medium leading-tight text-ink/60 sm:text-base">
+                <div className="mt-1 text-[11px] font-medium leading-tight text-ink/60 dark:text-cloud/55 sm:text-base">
                   {s.label}
                 </div>
               </div>

@@ -32,13 +32,13 @@ function Item({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
   return (
     <Reveal delay={index * 0.05}>
-      <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white">
+      <div className="overflow-hidden rounded-3xl border border-ink/10 bg-white dark:border-white/10 dark:bg-night-card">
         <button
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left"
         >
-          <span className="font-display text-lg font-bold text-ink sm:text-xl">
+          <span className="font-display text-lg font-bold text-ink dark:text-cloud sm:text-xl">
             {q}
           </span>
           <span
@@ -115,7 +115,7 @@ function Item({ q, a, index }: { q: string; a: string; index: number }) {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              <p className="px-6 pb-6 text-lg leading-relaxed text-ink/70">{a}</p>
+              <p className="px-6 pb-6 text-lg leading-relaxed text-ink/70 dark:text-cloud/70">{a}</p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -126,7 +126,7 @@ function Item({ q, a, index }: { q: string; a: string; index: number }) {
 
 export function FAQ() {
   return (
-    <section id="faq" className="relative overflow-hidden bg-ink py-24 sm:py-32">
+    <section id="faq" className="relative overflow-hidden bg-ink py-24 dark:bg-night sm:py-32">
       <div className="pointer-events-none absolute -right-16 top-10 h-72 w-72 rounded-full bg-water/15 blur-3xl" />
       <div className="container-px relative max-w-3xl">
         <Reveal>

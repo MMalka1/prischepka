@@ -7,7 +7,7 @@ import { GALLERY } from "@/lib/gallery";
 
 export function Gallery() {
   return (
-    <section id="gallery" className="relative bg-sand py-24 sm:py-32">
+    <section id="gallery" className="relative bg-sand py-24 dark:bg-night sm:py-32">
       <div className="container-px">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
@@ -17,13 +17,13 @@ export function Gallery() {
               </span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-display text-4xl font-black text-ink sm:text-6xl">
+              <h2 className="mt-6 font-display text-4xl font-black text-ink dark:text-cloud sm:text-6xl">
                 Здесь хочется остаться
               </h2>
             </Reveal>
           </div>
           <Reveal delay={0.15}>
-            <p className="max-w-xs text-ink/60 sm:text-right">
+            <p className="max-w-xs text-ink/60 dark:text-cloud/55 sm:text-right">
               Загляни одним глазком — и поймёшь, почему сюда возвращаются всё лето.
             </p>
           </Reveal>

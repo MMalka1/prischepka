@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -8,6 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        night: {
+          DEFAULT: "#0A1628",
+          soft: "#0E1E36",
+          card: "#16294A",
+        },
+        cloud: {
+          DEFAULT: "#E8EEFA",
+          dim: "#9DB0CE",
+        },
         sun: {
           DEFAULT: "#FF7A18",
           deep: "#FF5A00",

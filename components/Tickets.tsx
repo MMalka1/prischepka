@@ -15,7 +15,7 @@ export function Tickets() {
   return (
     <section
       id="tickets"
-      className="relative overflow-hidden bg-gradient-to-b from-water-sky to-water py-24 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-b from-water-sky to-water py-24 dark:bg-none dark:from-night dark:to-night sm:py-32"
     >
       <div className="container-px relative text-center">
         <Reveal>
@@ -96,7 +96,7 @@ export function Tickets() {
                   className={`group relative flex flex-col items-center overflow-hidden rounded-[2rem] p-8 text-center shadow-xl transition-shadow duration-300 hover:shadow-glow ${
                     featured
                       ? "bg-sunset text-white ring-4 ring-white/40"
-                      : "bg-white text-ink"
+                      : "bg-white text-ink dark:bg-night-card dark:text-cloud"
                   }`}
                 >
                   {/* hover glow sweep */}
@@ -122,7 +122,7 @@ export function Tickets() {
 
                   <div
                     className={`relative mt-2 text-sm ${
-                      featured ? "text-white/75" : "text-ink/50"
+                      featured ? "text-white/75" : "text-ink/50 dark:text-cloud/55"
                     }`}
                   >
                     {tab === "before" ? "вход до 17:00" : "вход с 17:00"}
@@ -133,7 +133,7 @@ export function Tickets() {
                     data-splash
                     className={`relative mt-7 w-full cursor-pointer rounded-full px-6 py-3.5 text-base font-extrabold transition-transform duration-200 hover:scale-[1.03] active:scale-95 ${
                       featured
-                        ? "bg-white text-sun-deep"
+                        ? "bg-white text-sun-deep dark:bg-cloud"
                         : "bg-sunset text-white shadow-glow"
                     }`}
                   >

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ClothesPin } from "./ClothesPin";
 import { OpenBadge } from "./OpenBadge";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,7 @@ export function Header() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-white/85 shadow-[0_8px_30px_-12px_rgba(11,37,69,0.25)] backdrop-blur-md"
+          ? "bg-white/85 shadow-[0_8px_30px_-12px_rgba(11,37,69,0.25)] backdrop-blur-md dark:bg-night/85 dark:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]"
           : "bg-transparent"
       }`}
     >
@@ -32,14 +33,14 @@ export function Header() {
           className="flex items-center gap-2 font-display text-lg font-extrabold tracking-tight sm:text-xl"
         >
           <ClothesPin className="h-8 w-auto drop-shadow" />
-          <span className={scrolled ? "text-ink" : "text-white drop-shadow"}>
+          <span className={scrolled ? "text-ink dark:text-cloud" : "text-white drop-shadow"}>
             ПРИЩЕПКА
           </span>
         </a>
 
         <div
           className={`hidden items-center gap-7 text-sm font-semibold lg:flex ${
-            scrolled ? "text-ink" : "text-white"
+            scrolled ? "text-ink dark:text-cloud" : "text-white"
           }`}
         >
           {[
@@ -60,6 +61,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle scrolled={scrolled} />
           <OpenBadge variant="header" scrolled={scrolled} />
 
           <a

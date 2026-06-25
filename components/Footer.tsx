@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-ink text-white">
+    <footer className="relative overflow-hidden bg-ink text-white dark:bg-night">
       <Waves colorTop="#0B2545" colorBottom="#0369A1" className="-mt-1" />
 
       <div className="container-px relative pb-10 pt-6">

@@ -63,13 +63,24 @@ export const viewport: Viewport = {
   themeColor: "#FF7A18",
 };
 
+// Ставим класс `dark` ещё до первой отрисовки: учитываем ручной выбор из
+// localStorage, иначе — время парка (ночь 21:00–09:00 по Красноярску).
+const themeInitScript = `(function(){try{var s=localStorage.getItem('theme');var d;if(s==='dark'||s==='light'){d=s==='dark';}else{var h=parseInt(new Intl.DateTimeFormat('ru-RU',{timeZone:'Asia/Krasnoyarsk',hour:'numeric',hour12:false}).format(new Date()),10);d=h>=21||h<9;}if(d){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className={`${unbounded.variable} ${inter.variable}`}>
+    <html
+      lang="ru"
+      suppressHydrationWarning
+      className={`${unbounded.variable} ${inter.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

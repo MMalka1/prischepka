@@ -16,6 +16,30 @@ body {
   overflow-x: hidden;
 }
 
+/* Dark (night) theme — auto after 21:00 Krasnoyarsk or manual toggle */
+.dark body {
+  @apply bg-night text-cloud;
+}
+
+/* Плавная смена цветов при переключении день/ночь */
+.dark body,
+.dark section,
+.dark footer,
+.dark header {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Перекраска «волн» между секциями в тёмной теме.
+   В светлой теме цвета задаются пропсами под фон соседней секции,
+   ночью — единый тёмный тон, чтобы переходы оставались бесшовными. */
+.dark .wave-back {
+  fill: #0A1628;
+  fill-opacity: 1;
+}
+.dark .wave-front {
+  fill: #0E1E36;
+}
+
 /* Reusable container */
 .container-px {
   @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8;

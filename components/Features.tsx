@@ -42,7 +42,7 @@ function Icon({ name }: { name: "wave" | "sun" | "drink" | "umbrella" | "music" 
 
 export function Features() {
   return (
-    <section id="features" className="relative overflow-hidden bg-ink py-24 sm:py-32">
+    <section id="features" className="relative overflow-hidden bg-ink py-24 dark:bg-night sm:py-32">
       <div className="container-px">
         <Reveal>
           <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-gold">

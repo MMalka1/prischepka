@@ -36,7 +36,7 @@ function Stars() {
 
 export function Reviews() {
   return (
-    <section id="reviews" className="relative overflow-hidden bg-sand-fade py-24 sm:py-32">
+    <section id="reviews" className="relative overflow-hidden bg-sand-fade py-24 dark:bg-none dark:bg-night sm:py-32">
       <div className="pointer-events-none absolute -right-20 top-0 h-72 w-72 rounded-full bg-water/20 blur-3xl" />
       <div className="container-px relative">
         <Reveal>
@@ -45,7 +45,7 @@ export function Reviews() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl font-black text-ink sm:text-6xl">
+          <h2 className="mt-6 font-display text-4xl font-black text-ink dark:text-cloud sm:text-6xl">
             Нас любят за лето
           </h2>
         </Reveal>
@@ -56,10 +56,10 @@ export function Reviews() {
               <motion.blockquote
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-[0_25px_60px_-30px_rgba(11,37,69,0.35)]"
+                className="flex h-full flex-col rounded-3xl bg-white p-7 shadow-[0_25px_60px_-30px_rgba(11,37,69,0.35)] dark:bg-night-card dark:shadow-none"
               >
                 <Stars />
-                <p className="mt-4 flex-1 text-lg leading-relaxed text-ink/80">
+                <p className="mt-4 flex-1 text-lg leading-relaxed text-ink/80 dark:text-cloud/75">
                   «{r.text}»
                 </p>
                 <footer className="mt-6 flex items-center gap-3">
@@ -67,8 +67,8 @@ export function Reviews() {
                     {r.name[0]}
                   </span>
                   <span>
-                    <span className="block font-bold text-ink">{r.name}</span>
-                    <span className="block text-sm text-ink/50">{r.tag}</span>
+                    <span className="block font-bold text-ink dark:text-cloud">{r.name}</span>
+                    <span className="block text-sm text-ink/50 dark:text-cloud/50">{r.tag}</span>
                   </span>
                 </footer>
               </motion.blockquote>

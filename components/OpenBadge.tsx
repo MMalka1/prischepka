@@ -37,8 +37,8 @@ export function OpenBadge({
         className={`hidden items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold sm:inline-flex ${
           scrolled
             ? isOpen
-              ? "bg-emerald-50 text-emerald-700"
-              : "bg-rose-50 text-rose-700"
+              ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300"
+              : "bg-rose-50 text-rose-700 dark:bg-rose-500/15 dark:text-rose-300"
             : "bg-white/20 text-white"
         }`}
       >

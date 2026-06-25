@@ -31,7 +31,7 @@ function PhoneIcon() {
 
 export function Info() {
   return (
-    <section id="info" className="relative bg-sand py-24 sm:py-32">
+    <section id="info" className="relative bg-sand py-24 dark:bg-night sm:py-32">
       <div className="container-px">
         <Reveal>
           <span className="inline-block rounded-full bg-water/10 px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-water-deep">
@@ -39,7 +39,7 @@ export function Info() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl font-black text-ink sm:text-6xl">
+          <h2 className="mt-6 font-display text-4xl font-black text-ink dark:text-cloud sm:text-6xl">
             Ждём тебя на берегу
           </h2>
         </Reveal>
@@ -52,16 +52,16 @@ export function Info() {
                 href={SITE.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] transition-transform duration-200 hover:-translate-y-1"
+                className="group flex items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] dark:bg-night-card dark:shadow-none transition-transform duration-200 hover:-translate-y-1"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sunset text-white">
                   <PinIcon />
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50">
+                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50 dark:text-cloud/50">
                     Адрес
                   </span>
-                  <span className="mt-1 block text-lg font-bold text-ink group-hover:text-sun-deep">
+                  <span className="mt-1 block text-lg font-bold text-ink dark:text-cloud group-hover:text-sun-deep">
                     {SITE.address}
                   </span>
                   <span className="mt-1 block text-sm font-medium text-water-deep">
@@ -72,15 +72,15 @@ export function Info() {
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="flex items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)]">
+              <div className="flex items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] dark:bg-night-card dark:shadow-none">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-water text-white">
                   <ClockIcon />
                 </span>
                 <span>
-                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50">
+                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50 dark:text-cloud/50">
                     Часы работы
                   </span>
-                  <span className="mt-1 block text-lg font-bold text-ink">
+                  <span className="mt-1 block text-lg font-bold text-ink dark:text-cloud">
                     {SITE.hours}
                   </span>
                   <span className="mt-1 block">
@@ -94,16 +94,16 @@ export function Info() {
               <Reveal delay={0.12}>
                 <a
                   href={`tel:${SITE.phonePark.tel}`}
-                  className="group flex h-full items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] transition-transform duration-200 hover:-translate-y-1"
+                  className="group flex h-full items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] dark:bg-night-card dark:shadow-none transition-transform duration-200 hover:-translate-y-1"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-coral text-white">
                     <PhoneIcon />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50">
+                    <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50 dark:text-cloud/50">
                       Парк
                     </span>
-                    <span className="mt-1 block text-lg font-bold text-ink group-hover:text-coral">
+                    <span className="mt-1 block text-lg font-bold text-ink dark:text-cloud group-hover:text-coral">
                       {SITE.phonePark.label}
                     </span>
                   </span>
@@ -113,16 +113,16 @@ export function Info() {
               <Reveal delay={0.16}>
                 <a
                   href={`tel:${SITE.phoneOffice.tel}`}
-                  className="group flex h-full items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] transition-transform duration-200 hover:-translate-y-1"
+                  className="group flex h-full items-start gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] dark:bg-night-card dark:shadow-none transition-transform duration-200 hover:-translate-y-1"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gold text-ink">
                     <PhoneIcon />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50">
+                    <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50 dark:text-cloud/50">
                       Офис
                     </span>
-                    <span className="mt-1 block text-lg font-bold text-ink group-hover:text-sun-deep">
+                    <span className="mt-1 block text-lg font-bold text-ink dark:text-cloud group-hover:text-sun-deep">
                       {SITE.phoneOffice.label}
                     </span>
                   </span>
@@ -131,12 +131,12 @@ export function Info() {
             </div>
 
             <Reveal delay={0.2}>
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)]">
+              <div className="flex items-center justify-between gap-4 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-25px_rgba(11,37,69,0.3)] dark:bg-night-card dark:shadow-none">
                 <span>
-                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50">
+                  <span className="block text-sm font-semibold uppercase tracking-wide text-ink/50 dark:text-cloud/50">
                     Мы в соцсетях
                   </span>
-                  <span className="mt-1 block text-lg font-bold text-ink">
+                  <span className="mt-1 block text-lg font-bold text-ink dark:text-cloud">
                     Новости, акции и фото
                   </span>
                 </span>

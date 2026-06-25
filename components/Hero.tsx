@@ -31,7 +31,7 @@ export function Hero() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-water-sky via-water to-water-deep"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-water-sky via-water to-water-deep dark:from-[#0b1c34] dark:via-[#0a1426] dark:to-[#060d1c]"
     >
       {/* Background photo layer (parallax) — замени /images/hero-bg.svg своим фото */}
       <motion.div style={{ y: waterY }} className="absolute inset-0">

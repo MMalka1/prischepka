@@ -43,7 +43,7 @@ export function VideoSection() {
   };
 
   return (
-    <section id="video" className="relative overflow-hidden bg-ink py-24 sm:py-32">
+    <section id="video" className="relative overflow-hidden bg-ink py-24 dark:bg-night sm:py-32">
       {/* Волны — переход из галереи */}
       <div className="absolute inset-x-0 top-0 z-[2]">
         <Waves flip colorTop="#FDE9C8" colorBottom="#F3D9A8" className="-mt-px" />
