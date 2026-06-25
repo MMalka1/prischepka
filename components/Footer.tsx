@@ -1,5 +1,6 @@
 import { Waves } from "./Waves";
 import { ClothesPin } from "./ClothesPin";
+import { Socials } from "./Socials";
 import { SITE } from "@/lib/site";
 
 export function Footer() {
@@ -75,17 +76,12 @@ export function Footer() {
                 </svg>
                 {SITE.phoneOffice.label}
               </a>
-              <a
-                href={SITE.vk}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#0077FF] px-4 py-2.5 font-semibold transition-transform hover:scale-[1.03]"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                  <path d="M13.16 18.1c-6.4 0-10.05-4.39-10.2-11.69h3.2c.1 5.36 2.47 7.63 4.34 8.1V6.41h3.02v4.62c1.85-.2 3.79-2.3 4.45-4.62h3.02c-.5 2.86-2.6 4.96-4.1 5.82 1.5.7 3.89 2.53 4.8 5.87h-3.32c-.71-2.22-2.49-3.93-4.85-4.17v4.17h-.36z" />
-                </svg>
-                ВКонтакте
-              </a>
+            </div>
+            <div className="mt-4">
+              <span className="mb-2 block text-sm font-bold uppercase tracking-wider text-white/50">
+                Соцсети
+              </span>
+              <Socials size={42} />
             </div>
           </div>
         </div>

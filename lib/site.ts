@@ -10,6 +10,8 @@ export const SITE = {
   phonePark: { label: "+7 (391) 295-58-66", tel: "+73912955866" },
   phoneOffice: { label: "+7 (391) 281-25-25", tel: "+73912812525" },
   vk: "https://vk.com/prischepka_24",
+  tg: "https://t.me/prischepka_24",
+  instagram: "https://www.instagram.com/prischepka_24",
 } as const;
 
 export type Ticket = { age: string; price: number };
