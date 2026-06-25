@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ss-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF9E3D"/><stop offset="45%" stop-color="#FF5C7A"/><stop offset="100%" stop-color="#7A3FA0"/></linearGradient>
+    <linearGradient id="ss-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FF8A5C"/><stop offset="100%" stop-color="#3A2A6B"/></linearGradient>
+    <filter id="g5"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#ss-sky)"/>
+  <circle cx="400" cy="540" r="130" fill="#FFE08A"/>
+  <circle cx="400" cy="540" r="130" fill="#FFD24A" opacity="0.6"/>
+  <rect y="560" width="800" height="440" fill="url(#ss-sea)"/>
+  <g fill="#FFE08A" opacity="0.6">
+    <rect x="360" y="580" width="80" height="14" rx="6"/>
+    <rect x="345" y="620" width="110" height="12" rx="6"/>
+    <rect x="330" y="670" width="140" height="12" rx="6"/>
+    <rect x="310" y="730" width="180" height="10" rx="5"/>
+  </g>
+  <g filter="url(#g5)"><rect width="800" height="1000" fill="transparent"/></g>
+</svg>

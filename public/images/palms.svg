@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pa-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFC531"/><stop offset="55%" stop-color="#FF7A18"/><stop offset="100%" stop-color="#FF4D6D"/></linearGradient>
+    <filter id="g3"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#pa-sky)"/>
+  <circle cx="400" cy="360" r="150" fill="#FFE9A8" opacity="0.85"/>
+  <ellipse cx="400" cy="980" rx="900" ry="180" fill="#0369A1" opacity="0.85"/>
+  <!-- palm silhouettes -->
+  <g fill="#3B1E12">
+    <path d="M150,1000 C150,800 170,650 190,560 L210,560 C230,650 240,800 240,1000 Z"/>
+    <path d="M200,560 C120,520 70,540 40,580 C110,540 170,545 205,575 Z"/>
+    <path d="M200,560 C280,520 340,540 380,580 C300,540 235,545 200,575 Z"/>
+    <path d="M200,560 C160,470 120,440 80,430 C150,460 185,500 205,560 Z"/>
+    <path d="M200,560 C250,470 300,445 350,440 C280,460 230,500 205,560 Z"/>
+  </g>
+  <g fill="#2A140B">
+    <path d="M620,1000 C620,820 635,690 650,610 L666,610 C682,690 690,820 690,1000 Z"/>
+    <path d="M658,610 C590,576 548,592 522,626 C582,592 632,598 662,624 Z"/>
+    <path d="M658,610 C726,576 768,596 792,628 C726,592 686,598 658,624 Z"/>
+    <path d="M658,610 C624,536 590,512 556,506 C616,532 644,564 662,610 Z"/>
+  </g>
+  <g filter="url(#g3)"><rect width="800" height="1000" fill="transparent"/></g>
+</svg>

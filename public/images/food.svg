@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="f-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFD56B"/><stop offset="100%" stop-color="#FF9E3D"/></linearGradient>
+    <filter id="g6"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#f-bg)"/>
+  <circle cx="400" cy="500" r="240" fill="#FFFFFF" opacity="0.25"/>
+  <!-- cocktail glass -->
+  <path d="M280,360 L520,360 L420,520 L420,700 L470,740 L330,740 L380,700 L380,520 Z" fill="#FFFFFF" opacity="0.92"/>
+  <path d="M300,378 L500,378 L430,490 L370,490 Z" fill="#FF4D6D"/>
+  <circle cx="500" cy="350" r="34" fill="#FF7A18"/>
+  <rect x="496" y="250" width="8" height="120" rx="4" fill="#0EA5E9"/>
+  <circle cx="350" cy="330" r="22" fill="#22C3E6"/>
+  <g filter="url(#g6)"><rect width="800" height="1000" fill="transparent"/></g>
+</svg>

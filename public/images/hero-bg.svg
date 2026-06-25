@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD56B"/>
+      <stop offset="35%" stop-color="#FF9E3D"/>
+      <stop offset="62%" stop-color="#FF6B4A"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22C3E6"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="72%" cy="30%" r="22%">
+      <stop offset="0%" stop-color="#FFF6D6"/>
+      <stop offset="45%" stop-color="#FFD24A"/>
+      <stop offset="100%" stop-color="#FF8A1E" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer><feComposite operator="over" in2="SourceGraphic"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1150" cy="300" r="160" fill="url(#sun)"/>
+  <circle cx="1150" cy="300" r="95" fill="#FFE9A8"/>
+  <rect y="620" width="1600" height="380" fill="url(#sea)"/>
+  <path d="M0,640 Q400,600 800,640 T1600,640 L1600,720 L0,720 Z" fill="#5BD4ED" opacity="0.5"/>
+  <ellipse cx="800" cy="1000" rx="1100" ry="200" fill="#FDE9C8" opacity="0.9"/>
+  <g filter="url(#grain)"><rect width="1600" height="1000" fill="transparent"/></g>
+</svg>
