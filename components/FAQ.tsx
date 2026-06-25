@@ -48,29 +48,49 @@ function Item({ q, a, index }: { q: string; a: string; index: number }) {
             <AnimatePresence mode="wait" initial={false}>
               {open ? (
                 <motion.svg
-                  key="lounger"
+                  key="umbrella"
                   width="22"
                   height="22"
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  initial={{ opacity: 0, rotate: -40, scale: 0.4 }}
-                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotate: 40, scale: 0.4 }}
-                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {/* лежак + откинутая спинка */}
-                  <path d="M2 16h11l7-7" />
-                  {/* второй рейл спинки (для объёма) */}
-                  <path d="M13 16l6.5-6.5" />
-                  {/* ножки */}
-                  <path d="M4.5 16 3.5 20" />
-                  <path d="M11.5 16 12.5 20" />
-                  {/* солнышко над шезлонгом */}
-                  <circle cx="18.5" cy="5.5" r="1.6" />
+                  {/* стойка + ручка */}
+                  <path
+                    d="M12 3 V19 q0 2 2 2"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  {/* раскрывающийся купол + рёбра */}
+                  <motion.g
+                    style={{ transformOrigin: "12px 3px" }}
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{
+                      delay: 0.06,
+                      type: "spring",
+                      stiffness: 240,
+                      damping: 15,
+                    }}
+                  >
+                    <path
+                      d="M2.5 11 Q2.5 2.5 12 2.5 Q21.5 2.5 21.5 11 Q18.5 8.8 15.5 11 Q12 8.8 8.5 11 Q5.5 8.8 2.5 11 Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M12 3 L3.5 10.6 M12 3 L8.7 10.6 M12 3 L15.3 10.6 M12 3 L20.5 10.6"
+                      fill="none"
+                      stroke="#FF5A00"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                    />
+                  </motion.g>
+                  <circle cx="12" cy="2.6" r="1.1" fill="currentColor" />
                 </motion.svg>
               ) : (
                 <motion.span
