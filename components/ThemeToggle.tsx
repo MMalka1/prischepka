@@ -68,23 +68,23 @@ export function ThemeToggle({ scrolled = false }: { scrolled?: boolean }) {
       onClick={toggle}
       aria-label={dark ? "Включить светлую тему" : "Включить тёмную тему"}
       title={dark ? "Светлая тема" : "Тёмная тема"}
-      className={`flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors duration-200 ${
+      className={`group relative flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-all duration-200 active:scale-90 ${
         scrolled
-          ? "text-ink hover:bg-ink/10 dark:text-cloud dark:hover:bg-white/10"
-          : "text-white hover:bg-white/15"
+          ? "border-ink/15 bg-ink/[0.06] text-sun-deep shadow-sm hover:bg-ink/10 dark:border-gold/40 dark:bg-gold/10 dark:text-gold dark:shadow-[0_0_20px_-2px_rgba(255,197,49,0.55)] dark:hover:bg-gold/20"
+          : "border-white/50 bg-white/15 text-white backdrop-blur-sm hover:scale-105 hover:bg-white/25 dark:border-gold/45 dark:bg-gold/15 dark:text-gold dark:shadow-[0_0_20px_-2px_rgba(255,197,49,0.55)]"
       }`}
     >
       {/* До монтирования иконку не рисуем, чтобы не было рассинхрона с SSR */}
       {mounted &&
         (dark ? (
           // солнце — клик включит светлую тему
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="transition-transform duration-300 group-hover:rotate-45">
             <circle cx="12" cy="12" r="4" />
             <path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" />
           </svg>
         ) : (
           // луна — клик включит тёмную тему
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden className="transition-transform duration-300 group-hover:-rotate-12">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
           </svg>
         ))}

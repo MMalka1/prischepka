@@ -10,10 +10,12 @@ import { VideoBg } from "./VideoBg";
 import { ClothesPin } from "./ClothesPin";
 import { OpenBadge } from "./OpenBadge";
 import { SITE } from "@/lib/site";
+import { useIsDark } from "@/lib/useIsDark";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
+  const isDark = useIsDark();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -53,13 +55,45 @@ export function Hero() {
       {/* Warm sky overlay → sunset feel + readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-gold/30 via-water/20 to-water-deep/50" />
 
-      {/* Parallax sun */}
+      {/* Parallax sun — на закате (тёмная тема) опускается за горизонт,
+          краснеет и гаснет. Внешний слой держит параллакс при скролле,
+          внутренний играет сам закат при смене темы. */}
       <motion.div
         style={{ y: sunY }}
-        className="absolute right-[6%] top-[10%] h-48 w-48 sm:right-[12%] sm:top-[12%] sm:h-72 sm:w-72 lg:h-80 lg:w-80"
+        className="absolute right-[6%] top-[10%] z-[6] h-48 w-48 sm:right-[12%] sm:top-[12%] sm:h-72 sm:w-72 lg:h-80 lg:w-80"
       >
-        <Sun className="relative h-full w-full" />
+        <motion.div
+          className="h-full w-full"
+          initial={false}
+          animate={
+            isDark
+              ? {
+                  y: 380,
+                  scale: 0.78,
+                  opacity: 0.16,
+                  filter: "brightness(0.78) saturate(1.6) hue-rotate(-18deg)",
+                }
+              : {
+                  y: 0,
+                  scale: 1,
+                  opacity: 1,
+                  filter: "brightness(1) saturate(1) hue-rotate(0deg)",
+                }
+          }
+          transition={{ duration: reduce ? 0 : 1.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Sun className="relative h-full w-full" />
+        </motion.div>
       </motion.div>
+
+      {/* Закатное свечение у горизонта — проявляется в тёмной теме */}
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-2/5 bg-gradient-to-t from-[#FF6A3D]/40 via-[#FF3D6E]/12 to-transparent"
+        initial={false}
+        animate={{ opacity: isDark ? 1 : 0 }}
+        transition={{ duration: reduce ? 0 : 1.8, ease: "easeInOut" }}
+      />
 
       {/* Плавающая прищепка-предмет (бренд) */}
       <motion.div
