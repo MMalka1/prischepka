@@ -12,6 +12,7 @@ import { Reviews } from "@/components/Reviews";
 import { FAQ } from "@/components/FAQ";
 import { Info } from "@/components/Info";
 import { Footer } from "@/components/Footer";
+import { SplashLayer } from "@/components/SplashLayer";
 import { SITE } from "@/lib/site";
 
 const jsonLd = {
@@ -41,6 +42,7 @@ export default function Home() {
       />
       <ScrollProgress />
       <GrainOverlay />
+      <SplashLayer />
       <Header />
       <main>
         <Hero />

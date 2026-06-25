@@ -130,6 +130,7 @@ export function Tickets() {
 
                   <a
                     href="#info"
+                    data-splash
                     className={`relative mt-7 w-full cursor-pointer rounded-full px-6 py-3.5 text-base font-extrabold transition-transform duration-200 hover:scale-[1.03] active:scale-95 ${
                       featured
                         ? "bg-white text-sun-deep"

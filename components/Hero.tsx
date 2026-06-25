@@ -122,6 +122,7 @@ export function Hero() {
         >
           <a
             href="#tickets"
+            data-splash
             className="cta-glow relative w-full rounded-full bg-sunset px-8 py-4 text-center text-lg font-extrabold text-white shadow-glow-coral transition-transform duration-200 hover:scale-[1.04] active:scale-95 sm:w-auto"
           >
             Купить билет
@@ -130,6 +131,7 @@ export function Hero() {
             href={SITE.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
+            data-splash
             className="w-full rounded-full border-2 border-white/80 bg-white/10 px-8 py-4 text-center text-lg font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:text-ink sm:w-auto"
           >
             Как добраться

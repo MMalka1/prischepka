@@ -64,6 +64,7 @@ export function Header() {
 
           <a
             href="#tickets"
+            data-splash
             className="rounded-full bg-sunset px-4 py-2 text-sm font-bold text-white shadow-glow transition-transform duration-200 hover:scale-[1.04] active:scale-95 sm:px-5 sm:text-base"
           >
             Купить билет
