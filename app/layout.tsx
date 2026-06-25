@@ -16,7 +16,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = "https://prischepka-park.ru";
+const SITE_URL = "https://prischepka-j5dm.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
