@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ClothesPin } from "./ClothesPin";
+import { OpenBadge } from "./OpenBadge";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,17 +60,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <span
-            className={`hidden items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold sm:inline-flex ${
-              scrolled ? "bg-emerald-50 text-emerald-700" : "bg-white/20 text-white"
-            }`}
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            </span>
-            Открыто
-          </span>
+          <OpenBadge variant="header" scrolled={scrolled} />
 
           <a
             href="#tickets"

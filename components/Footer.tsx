@@ -1,6 +1,7 @@
 import { Waves } from "./Waves";
 import { ClothesPin } from "./ClothesPin";
 import { Socials } from "./Socials";
+import { OpenBadge } from "./OpenBadge";
 import { SITE } from "@/lib/site";
 
 export function Footer() {
@@ -47,9 +48,8 @@ export function Footer() {
               Часы
             </h3>
             <p className="mt-3 font-medium text-white/90">{SITE.hours}</p>
-            <span className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400">
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              Открыто
+            <span className="mt-2 block">
+              <OpenBadge variant="footer" />
             </span>
           </div>
 

@@ -2,6 +2,7 @@
 
 import { Reveal } from "./Reveal";
 import { Socials } from "./Socials";
+import { OpenBadge } from "./OpenBadge";
 import { SITE } from "@/lib/site";
 
 function PinIcon() {
@@ -82,9 +83,8 @@ export function Info() {
                   <span className="mt-1 block text-lg font-bold text-ink">
                     {SITE.hours}
                   </span>
-                  <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600">
-                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                    Сейчас открыто
+                  <span className="mt-1 block">
+                    <OpenBadge variant="info" />
                   </span>
                 </span>
               </div>

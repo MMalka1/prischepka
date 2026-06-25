@@ -8,6 +8,7 @@ import { Waves } from "./Waves";
 import { Particles } from "./Particles";
 import { VideoBg } from "./VideoBg";
 import { ClothesPin } from "./ClothesPin";
+import { OpenBadge } from "./OpenBadge";
 import { SITE } from "@/lib/site";
 
 export function Hero() {
@@ -87,18 +88,13 @@ export function Hero() {
         style={{ y: titleY, opacity: fade }}
         className="container-px relative z-10 mt-10 text-center"
       >
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm sm:text-base"
         >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
-          </span>
-          Открыто · {SITE.hours}
-        </motion.span>
+          <OpenBadge variant="hero" />
+        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, scale: 0.92, y: 24 }}
