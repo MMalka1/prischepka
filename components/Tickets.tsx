@@ -153,7 +153,7 @@ export function Tickets() {
         </Reveal>
       </div>
 
-      {/* Волна-переход в «Отзывы» (песок) */}
+      {/* Волна-переход в «Отзывы» */}
       <div className="absolute inset-x-0 bottom-0">
         <Waves colorTop="#FDE9C8" colorBottom="#F3D9A8" className="-mb-px" />
       </div>

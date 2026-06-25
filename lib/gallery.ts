@@ -38,7 +38,7 @@ export const GALLERY: Photo[] = [
   {
     src: "/images/photo-2.jpg",
     fallback: "/images/loungers.svg",
-    alt: "Шезлонги и зонты на песке",
+    alt: "Шезлонги и зонты у бассейна",
     caption: "Шезлонги и тень",
   },
   {

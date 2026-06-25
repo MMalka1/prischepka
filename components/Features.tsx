@@ -108,7 +108,7 @@ export function Features() {
         </div>
       </div>
 
-      {/* Песочные волны — переход в галерею */}
+      {/* Волны — переход в галерею */}
       <div className="absolute inset-x-0 bottom-0">
         <Waves colorTop="#FDE9C8" colorBottom="#F3D9A8" className="-mb-px" />
       </div>

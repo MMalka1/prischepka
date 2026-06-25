@@ -90,7 +90,7 @@ export function FAQ() {
         </div>
       </div>
 
-      {/* Волна-переход в «Контакты» (песок выходит из тёмной) */}
+      {/* Волна-переход в «Контакты» */}
       <div className="absolute inset-x-0 bottom-0 z-[2]">
         <Waves colorTop="#FFF5E6" colorBottom="#FDE9C8" className="-mb-px" />
       </div>

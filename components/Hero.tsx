@@ -36,7 +36,7 @@ export function Hero() {
       <motion.div style={{ y: waterY }} className="absolute inset-0">
         <Image
           src="/images/hero-bg.svg"
-          alt="Пляж-парк Прищепка: солнце, вода и песок"
+          alt="Пляж-парк Прищепка: зелёная территория и тёплые бассейны"
           fill
           priority
           sizes="100vw"
