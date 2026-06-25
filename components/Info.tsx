@@ -128,6 +128,29 @@ export function Info() {
                 </a>
               </Reveal>
             </div>
+
+            <Reveal delay={0.2}>
+              <a
+                href={SITE.vk}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 rounded-3xl bg-[#0077FF] p-6 text-white shadow-[0_20px_50px_-25px_rgba(0,119,255,0.6)] transition-transform duration-200 hover:-translate-y-1"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <path d="M13.16 18.1c-6.4 0-10.05-4.39-10.2-11.69h3.2c.1 5.36 2.47 7.63 4.34 8.1V6.41h3.02v4.62c1.85-.2 3.79-2.3 4.45-4.62h3.02c-.5 2.86-2.6 4.96-4.1 5.82 1.5.7 3.89 2.53 4.8 5.87h-3.32c-.71-2.22-2.49-3.93-4.85-4.17v4.17h-.36z" />
+                  </svg>
+                </span>
+                <span>
+                  <span className="block text-sm font-semibold uppercase tracking-wide text-white/70">
+                    Мы ВКонтакте
+                  </span>
+                  <span className="mt-1 block text-lg font-bold">
+                    Новости, акции и фото →
+                  </span>
+                </span>
+              </a>
+            </Reveal>
           </div>
 
           {/* Map */}

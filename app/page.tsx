@@ -29,6 +29,7 @@ const jsonLd = {
   openingHours: "Mo-Su 09:00-21:00",
   telephone: SITE.phonePark.label,
   hasMap: SITE.mapUrl,
+  sameAs: [SITE.vk],
 };
 
 export default function Home() {
