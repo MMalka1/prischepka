@@ -41,14 +41,51 @@ function Item({ q, a, index }: { q: string; a: string; index: number }) {
           <span className="font-display text-lg font-bold text-ink sm:text-xl">
             {q}
           </span>
-          <motion.span
-            animate={{ rotate: open ? 45 : 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sunset text-2xl font-light leading-none text-white"
+          <span
+            className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sunset text-white"
             aria-hidden
           >
-            +
-          </motion.span>
+            <AnimatePresence mode="wait" initial={false}>
+              {open ? (
+                <motion.svg
+                  key="lounger"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ opacity: 0, rotate: -40, scale: 0.4 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 40, scale: 0.4 }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {/* лежак + откинутая спинка */}
+                  <path d="M2 16h11l7-7" />
+                  {/* второй рейл спинки (для объёма) */}
+                  <path d="M13 16l6.5-6.5" />
+                  {/* ножки */}
+                  <path d="M4.5 16 3.5 20" />
+                  <path d="M11.5 16 12.5 20" />
+                  {/* солнышко над шезлонгом */}
+                  <circle cx="18.5" cy="5.5" r="1.6" />
+                </motion.svg>
+              ) : (
+                <motion.span
+                  key="plus"
+                  className="text-2xl font-light leading-none"
+                  initial={{ opacity: 0, rotate: -90, scale: 0.4 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 90, scale: 0.4 }}
+                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  +
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </span>
         </button>
         <AnimatePresence initial={false}>
           {open && (
