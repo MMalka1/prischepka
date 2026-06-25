@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { Sun } from "./Sun";
+import { Moon } from "./Moon";
 import { Waves } from "./Waves";
 import { Particles } from "./Particles";
 import { VideoBg } from "./VideoBg";
@@ -68,10 +69,10 @@ export function Hero() {
           animate={
             isDark
               ? {
-                  y: 380,
-                  scale: 0.78,
-                  opacity: 0.16,
-                  filter: "brightness(0.78) saturate(1.6) hue-rotate(-18deg)",
+                  y: 400,
+                  scale: 0.74,
+                  opacity: 0.1,
+                  filter: "brightness(0.7) saturate(1.55) hue-rotate(-18deg)",
                 }
               : {
                   y: 0,
@@ -80,19 +81,38 @@ export function Hero() {
                   filter: "brightness(1) saturate(1) hue-rotate(0deg)",
                 }
           }
-          transition={{ duration: reduce ? 0 : 1.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: reduce ? 0 : 3.6, ease: [0.33, 0, 0.2, 1] }}
         >
           <Sun className="relative h-full w-full" />
         </motion.div>
       </motion.div>
 
-      {/* Закатное свечение у горизонта — проявляется в тёмной теме */}
+      {/* Луна — медленно восходит в тёмной теме, пока солнце садится */}
+      <motion.div
+        style={{ y: sunY }}
+        className="absolute right-[9%] top-[7%] z-[6] h-40 w-40 sm:right-[14%] sm:top-[9%] sm:h-52 sm:w-52 lg:h-60 lg:w-60"
+      >
+        <motion.div
+          className="h-full w-full"
+          initial={false}
+          animate={
+            isDark
+              ? { y: 0, opacity: 1, scale: 1 }
+              : { y: 320, opacity: 0, scale: 0.8 }
+          }
+          transition={{ duration: reduce ? 0 : 3.6, ease: [0.33, 0, 0.2, 1] }}
+        >
+          <Moon className="relative h-full w-full" />
+        </motion.div>
+      </motion.div>
+
+      {/* Закатное свечение у горизонта — мягкое и приглушённое, в тёмной теме */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-2/5 bg-gradient-to-t from-[#FF6A3D]/40 via-[#FF3D6E]/12 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-2/5 bg-gradient-to-t from-[#FF6A3D]/20 via-[#FF3D6E]/6 to-transparent"
         initial={false}
-        animate={{ opacity: isDark ? 1 : 0 }}
-        transition={{ duration: reduce ? 0 : 1.8, ease: "easeInOut" }}
+        animate={{ opacity: isDark ? 0.6 : 0 }}
+        transition={{ duration: reduce ? 0 : 3.6, ease: "easeInOut" }}
       />
 
       {/* Плавающая прищепка-предмет (бренд) */}
