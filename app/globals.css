@@ -73,24 +73,23 @@ body {
     drop-shadow(0 14px 40px rgba(3, 105, 161, 0.45));
 }
 
-/* Логотип в шапке: при наведении по надписи пробегает глянцевый блик.
-   Базовый цвет берём из currentColor, поэтому эффект работает в любой теме
-   (белая надпись на фото, тёмная/светлая после скролла). */
+/* Логотип в шапке: поверх надписи лежит прозрачный слой-копия, по которому
+   при наведении пробегает светлая полоса-блик. Заливка прозрачная везде,
+   кроме самой полосы, поэтому основная надпись всегда полностью видна. */
 .logo-shine {
   background-image: linear-gradient(
     100deg,
-    currentColor 0%,
-    currentColor 40%,
-    rgba(255, 255, 255, 0.95) 50%,
-    currentColor 60%,
-    currentColor 100%
+    transparent 35%,
+    rgba(255, 255, 255, 0.92) 50%,
+    transparent 65%
   );
   background-size: 250% 100%;
-  background-position: 150% 0; /* блик уведён за правый край — в покое надпись обычная */
+  background-position: 150% 0; /* в покое полоса уведена за правый край */
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .group:hover .logo-shine {
   animation: logo-shine 0.9s ease-in-out;

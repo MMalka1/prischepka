@@ -33,13 +33,17 @@ export function Header() {
           className="group flex items-center gap-2 font-display text-lg font-extrabold tracking-tight sm:text-xl"
         >
           <ClothesPin className="h-8 w-auto drop-shadow" />
-          {/* При наведении по надписи красиво пробегает блик */}
-          <span
-            className={`logo-shine inline-block ${
-              scrolled ? "text-ink dark:text-cloud" : "text-white drop-shadow"
-            }`}
-          >
-            ПРИЩЕПКА
+          {/* Надпись + отдельный слой-блик поверх (сам текст всегда видно) */}
+          <span className="relative inline-block">
+            <span className={scrolled ? "text-ink dark:text-cloud" : "text-white drop-shadow"}>
+              ПРИЩЕПКА
+            </span>
+            <span
+              aria-hidden
+              className="logo-shine pointer-events-none absolute inset-0"
+            >
+              ПРИЩЕПКА
+            </span>
           </span>
         </a>
 
