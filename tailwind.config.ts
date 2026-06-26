@@ -68,12 +68,17 @@ const config: Config = {
           "70%": { transform: "scale(1.25)", opacity: "0" },
           "100%": { transform: "scale(1.25)", opacity: "0" },
         },
+        "pin-sway": {
+          "0%, 100%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(4deg)" },
+        },
       },
       animation: {
         "spin-slow": "spin-slow 40s linear infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
         "heat-haze": "heat-haze 6s ease-in-out infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.4,0,0.6,1) infinite",
+        "pin-sway": "pin-sway 1.8s ease-in-out 0.3s infinite",
       },
     },
   },
