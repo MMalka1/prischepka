@@ -33,9 +33,9 @@ export function Header() {
           className="group flex items-center gap-2 font-display text-lg font-extrabold tracking-tight sm:text-xl"
         >
           <ClothesPin className="h-8 w-auto drop-shadow" />
-          {/* При наведении надпись задорно «дёргается» */}
+          {/* При наведении по надписи красиво пробегает блик */}
           <span
-            className={`inline-block group-hover:animate-jerk ${
+            className={`logo-shine inline-block ${
               scrolled ? "text-ink dark:text-cloud" : "text-white drop-shadow"
             }`}
           >
