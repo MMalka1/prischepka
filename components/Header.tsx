@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ClothesPin } from "./ClothesPin";
+import { PinA } from "./PinA";
 import { OpenBadge } from "./OpenBadge";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -30,24 +30,23 @@ export function Header() {
       <nav className="container-px flex h-16 items-center justify-between sm:h-[72px]">
         <a
           href="#hero"
-          className="group flex items-center gap-2 font-display text-lg font-extrabold tracking-tight sm:text-xl"
+          className="group flex items-center font-display text-lg font-extrabold tracking-tight sm:text-xl"
         >
-          <ClothesPin className="h-8 w-auto drop-shadow" />
           <span className={scrolled ? "text-ink dark:text-cloud" : "text-white drop-shadow"}>
             ПРИЩЕПК
-            {/* Последняя «А» при наведении превращается в прищепку */}
+            {/* Последняя «А» при наведении превращается в красную прищепку-«А» */}
             <span className="relative inline-block align-baseline">
               {/* сама буква — прячется (ширину сохраняем, чтобы текст не прыгал) */}
               <span className="inline-block origin-bottom transition-all duration-300 ease-out group-hover:scale-0 group-hover:opacity-0">
                 А
               </span>
-              {/* прищепка — выпрыгивает на месте буквы */}
+              {/* прищепка в форме буквы А — выпрыгивает на месте буквы, остриём вверх */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute -bottom-[0.1em] left-1/2 h-[1.32em] -translate-x-1/2 origin-bottom scale-0 rotate-[-18deg] opacity-0 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-100 group-hover:rotate-0 group-hover:opacity-100"
+                className="pointer-events-none absolute -bottom-[0.06em] left-1/2 h-[1.12em] -translate-x-1/2 origin-bottom scale-0 opacity-0 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:scale-100 group-hover:opacity-100"
               >
-                <span className="block h-full origin-[50%_35%] group-hover:animate-pin-sway">
-                  <ClothesPin className="h-full w-auto drop-shadow-[0_4px_8px_rgba(11,37,69,0.4)]" />
+                <span className="block h-full origin-bottom group-hover:animate-pin-sway">
+                  <PinA className="h-full w-auto drop-shadow-[0_4px_8px_rgba(11,37,69,0.4)]" />
                 </span>
               </span>
             </span>
